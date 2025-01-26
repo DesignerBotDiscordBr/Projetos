@@ -1,2 +1,3 @@
 # Projetos
-Meus projetos do curso de front
+Meus projetos do meu curso de python
+
