@@ -1,0 +1,32 @@
+while True:
+
+    try:
+        continuar = input('Deseja continuar? [S] ou [N]: ')
+        if continuar.lower() == 'n' or continuar.lower() == 'N':
+            break
+
+        num_1 = input('Digite o primeiro numero: ')
+        num_11 = float(num_1) 
+    
+        num_2 = input('Digite o segundo numero: ')
+        num_22 = float(num_2)
+
+        operador_1 = input('Digiti o operador, +, -, /, *: ')
+        operador_11 = str(operador_1)
+        
+        cal_mais = num_11 + num_22
+        cal_menos = num_11 - num_22
+        cal_multi = num_11 * num_22
+        cal_divi = num_11 / num_22
+
+        if operador_11 == '+':
+            print(f'{num_11} + {num_22} = {cal_mais}')
+        elif operador_11 == '-':
+            print(f'{num_11} - {num_22} = {cal_menos}')
+        elif operador_11 == '*':
+            print(f'{num_11} * {num_22} = {cal_multi}')
+        elif operador_11 == '/':
+            print(f'{num_11} / {num_22} = {cal_divi:.2f}')
+        
+    except:
+        print('Você nao digitou o que foi pedido, Tente Novamente...') 
