@@ -1,9 +1,5 @@
 while True:
-
     try:
-        continuar = input('Deseja continuar? [S] ou [N]: ')
-        if continuar.lower() == 'n' or continuar.lower() == 'N':
-            break
 
         num_1 = input('Digite o primeiro numero: ')
         num_11 = float(num_1) 
@@ -18,7 +14,9 @@ while True:
         cal_menos = num_11 - num_22
         cal_multi = num_11 * num_22
         cal_divi = num_11 / num_22
-
+        operadores_permitidos = '+-*/'
+        if operador_11 not in operadores_permitidos:
+            print('Operador nao permitido')
         if operador_11 == '+':
             print(f'{num_11} + {num_22} = {cal_mais}')
         elif operador_11 == '-':
@@ -28,5 +26,11 @@ while True:
         elif operador_11 == '/':
             print(f'{num_11} / {num_22} = {cal_divi:.2f}')
         
+        sair = input('Deseja Sair [S]: ').lower().startswith('s')
+        if sair is True:
+            print('Voce saiu da Calculadora')
+            break
+        else:
+            print('Voce continua na Calculadora')
     except:
         print('Você nao digitou o que foi pedido, Tente Novamente...') 
